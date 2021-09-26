@@ -1,7 +1,12 @@
 var readLineSync = require("readline-sync")
 const chalk = require('chalk');
 var userName = readLineSync.question("Enter Your name? ")
+console.log("")
+
 console.log(`Welcome ${userName} in my quizz`)
+console.log("")
+console.log(chalk.red("Enter a,b,c,d to answer"))
+console.log("")
 
 var QuestionOne= {
   question:"From which country does Apple company belong?",
@@ -27,8 +32,24 @@ var QuestionThree={
   d:"Micromax",
   answer:"d"
 }
+var QuestionFour={
+  question:"Among these which processor belongs to samsung company?",
+  a:"Exynos 980",
+  b:"Dimensity 700",
+  c:"Snapdragon 450",
+  d:"Bionic A14",
+  answer:"a"
+}
+var QuestionFive={
+  question:"Which is the world's biggest semicondoctor companies by market value?",
+  a:"Samsung",
+  b:"Tmc",
+  c:"Huawei",
+  d:"Intel",
+  answer:"b"
+}
 
-var quizArrary=[QuestionOne,QuestionTwo,QuestionThree]
+var quizArrary=[QuestionOne,QuestionTwo,QuestionThree,QuestionFour,QuestionFive]
 var scoreValue=0
 for ( let i=0;i<quizArrary.length;i++){
   console.log(chalk.blue(quizArrary[i].question))
